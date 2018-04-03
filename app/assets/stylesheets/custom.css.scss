@@ -47,30 +47,39 @@ $navbar-default-bg: rgb(54, 93, 152);
 .btn-home:hover, .btn-home:focus {
   border: 0;
   color: white;
-  background-color: rgb(60, 105, 173) !important;
+  background-color: rgb(60, 105, 173);
 }
 
 ul.nav.navbar-nav li a {
   color: #c0c0c0;
-  transition: all 300ms linear !important;
-  -webkit-transition: all 300ms linear !important;
-  -ms-transition: all 300ms linear !important;
+  transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
 }
 
 ul.nav.navbar-nav li a:hover {
   color: black;
-  transition: all 300ms linear !important;
-  -webkit-transition: all 300ms linear !important;
-  -ms-transition: all 300ms linear !important;
+  transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
 }
 
 footer {
   border-top: 1px solid lightgray;
   padding-top: 7px;
   background-color: #eee;
+  text-align: center;
 }
 
 footer ul li{
   display: inline;
   padding: 5px;
+}
+
+#h1-center {
+  text-align: center;
+}
+
+textarea.form-control {
+  height: 150px;
 }
