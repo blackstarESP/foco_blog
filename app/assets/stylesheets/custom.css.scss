@@ -73,6 +73,17 @@ ul.nav.navbar-nav li a:hover {
   margin-top: 0;
 }
 
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 footer {
   border-top: 1px solid lightgray;
   padding-top: 7px;
