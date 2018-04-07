@@ -10,6 +10,9 @@ end
 gem 'rails', '~> 5.1.6'
 # For secure passwords for new users
 gem 'bcrypt', '~> 3.1.7'
+# For pagination
+gem 'will_paginate', '~> 3.1.5'
+gem 'bootstrap-will_paginate', '~> 1.0.0'
 # For UI/UX development
 gem 'jquery-rails'
 # Use Puma as the app server
