@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   # Generate routes for users
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
+  # Generates a login route
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
