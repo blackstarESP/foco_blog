@@ -17,6 +17,8 @@ gem 'bootstrap-will_paginate', '~> 1.0.0'
 gem 'jquery-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+# For intelligent, clean comments
+gem 'annotate'
 # Bootstrap for front end development
 gem 'bootstrap-sass', '~> 3.3.7'
 # Use SCSS for stylesheets
