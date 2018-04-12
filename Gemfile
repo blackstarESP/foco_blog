@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.6'
 gem 'bcrypt', '~> 3.1.7'
 # Allows for integration testing
 gem 'rails-controller-testing'
+# Beautify ERB
+gem 'htmlbeautifier'
 # For pagination
 gem 'will_paginate', '~> 3.1.5'
 gem 'bootstrap-will_paginate', '~> 1.0.0'

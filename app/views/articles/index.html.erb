@@ -1,10 +1,7 @@
 <h1 class="text-center">Article Listing</h1>
-
 <!-- Adds pagination above article snippet loop -->
 <div class="text-center"><%= will_paginate %></div>
-
 <!-- Article snippet loop -->
 <%= render 'article', obj: @articles %>
-
 <!-- Adds pagination below article snippet loop -->
 <div class="text-center"><%= will_paginate %></div>
