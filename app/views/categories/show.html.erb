@@ -1,0 +1,7 @@
+<h1 class="text-center"><%= 'Category: ' +  @category.name %></h1>
+<!-- Adds pagination above article snippet loop -->
+<div class="text-center"><%= will_paginate @category_articles %></div>
+<!-- Article snippet loop -->
+<%= render 'articles/article', obj: @category_articles %>
+<!-- Adds pagination below article snippet loop -->
+<div class="text-center"><%= will_paginate @category_articles %></div>

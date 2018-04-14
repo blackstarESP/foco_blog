@@ -19,6 +19,10 @@
             </small>
           </div>
         </div>
+        <!-- Article category display -->
+        <% if article.categories.any? %>
+          <p>Categories: <%= render article.categories %></p>
+        <% end %>
         <!-- Article Edit, Delete, View buttons -->
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
           <div class="article-actions">

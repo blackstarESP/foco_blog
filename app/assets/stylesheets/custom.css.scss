@@ -26,6 +26,15 @@ $navbar-default-bg: #000;
      color: #fff;
      text-decoration: none;
 }
+.badge {
+  background-color: #cef6f5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.input-checkbox input {
+  width: auto !important;
+}
  .jumbotron {
      background-image: asset-url('old-town.jpg');
      background-size: cover;
