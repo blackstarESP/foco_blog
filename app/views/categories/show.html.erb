@@ -1,4 +1,14 @@
 <h1 class="text-center"><%= 'Category: ' +  @category.name %></h1>
+<!-- Show/Hide category editing capability based on permission level -->
+<% if logged_in? and current_user.admin? %>
+  <div class="row text-center edit-badge">
+    <span class="badge">
+      <small>
+        <%= link_to 'Edit category name', edit_category_path(@category) %>
+      </small>
+    </span>
+  </div>
+<% end %>
 <!-- Adds pagination above article snippet loop -->
 <div class="text-center"><%= will_paginate @category_articles %></div>
 <!-- Article snippet loop -->
