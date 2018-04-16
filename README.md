@@ -1,1 +1,2 @@
-This is the repository for the Fort Collins blog application.
+A simple blogging application that manages users, sessions, admin privileges
+and basic CRUD functionality.
