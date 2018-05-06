@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: categories
@@ -8,6 +10,7 @@
 #  updated_at :datetime         not null
 #
 
+# Category model, its relationships, and its validation requirements
 class Category < ApplicationRecord
   has_many :article_categories
   has_many :articles, through: :article_categories

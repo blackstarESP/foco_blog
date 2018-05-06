@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: articles
@@ -10,6 +12,7 @@
 #  user_id     :integer
 #
 
+# Article model, its relationships, and its validation requirements
 class Article < ApplicationRecord
   belongs_to :user
   has_many :article_categories

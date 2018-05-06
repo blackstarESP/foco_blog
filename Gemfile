@@ -14,6 +14,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails-controller-testing'
 # Beautify ERB
 gem 'htmlbeautifier'
+# Adhere to Ruby styling conventions
+gem 'rubocop'
 # For pagination
 gem 'will_paginate', '~> 3.1.5'
 gem 'bootstrap-will_paginate', '~> 1.0.0'

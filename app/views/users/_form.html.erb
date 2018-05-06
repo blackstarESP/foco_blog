@@ -1,33 +1,45 @@
+<!-- Error display partial -->
 <%= render 'shared/errors', obj: @user %>
 <div class="row">
   <div class="col-sm-12">
-    <%= form_for @user, :html => { class: 'form-horizontal', role: 'form' } do |f| %>
+    <%= form_for @user, :html => { class: 'form-horizontal', role: 'form' }
+        do |f| %>
+
       <!-- Username input field  -->
       <div class="form-group">
         <%= f.label :username, class: 'control-label col-sm-2' %>
         <div class="col-sm-8">
-          <%= f.text_field :username, class: 'form-control', placeholder: 'Enter username', autofocus: true %>
+          <%= f.text_field :username, class: 'form-control',
+                                      placeholder: 'Enter username',
+                                      autofocus: true %>
         </div>
       </div>
+
       <!-- Email input field  -->
       <div class="form-group">
         <%= f.label :email, class: 'control-label col-sm-2' %>
         <div class="col-sm-8">
-          <%= f.email_field :email, class: 'form-control', placeholder: 'Enter email' %>
+          <%= f.email_field :email, class: 'form-control',
+                                    placeholder: 'Enter email' %>
         </div>
       </div>
+
       <!-- Password input field  -->
       <div class="form-group">
         <%= f.label :password, class: 'control-label col-sm-2' %>
         <div class="col-sm-8">
-          <%= f.password_field :password, class: 'form-control', placeholder: 'Enter password' %>
+          <%= f.password_field :password, class: 'form-control',
+                                          placeholder: 'Enter password' %>
         </div>
       </div>
+
       <!-- Action buttons  -->
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-8">
-          <%= f.submit(@user.new_record? ? 'Sign Up' : 'Update account', class: 'btn btn-primary btn-sm') %>
-          <%= link_to 'Cancel and return to articles list', articles_path, class: 'btn btn-danger btn-sm' %>
+          <%= f.submit(@user.new_record? ? 'Sign Up' : 'Update account',
+              class: 'btn btn-primary btn-sm') %>
+          <%= link_to 'Cancel and return to articles list', articles_path,
+              class: 'btn btn-danger btn-sm' %>
         </div>
       </div>
     <% end %>

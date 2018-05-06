@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+# Defines before actions and CRUD actions for article objects
 class ArticlesController < ApplicationController
-  before_action :set_article_by_id, only: [:edit, :update, :show, :destroy]
-  before_action :require_user, except: [:index, :show]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :set_article_by_id, only: %i[edit update show destroy]
+  before_action :require_user, except: %i[index show]
+  before_action :require_same_user, only: %i[edit update destroy]
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5)
@@ -11,8 +14,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @article = Article.new(article_params)
@@ -34,8 +36,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
   def destroy
     @article.destroy
@@ -44,6 +45,7 @@ class ArticlesController < ApplicationController
   end
 
   private
+
   def set_article_by_id
     @article = Article.find(params[:id])
   end
@@ -53,9 +55,8 @@ class ArticlesController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @article.user and !current_user.admin?
-      flash[:danger] = 'You can only edit or delete your own articles.'
-      redirect_to root_path
-    end
+    return true unless current_user != @article.user && !current_user.admin?
+    flash[:danger] = 'You can only edit or delete your own articles.'
+    redirect_to root_path
   end
 end
